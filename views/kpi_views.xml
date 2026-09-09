@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_sales_kpi_list" model="ir.ui.view">
+        <field name="name">sales.kpi.list</field>
+        <field name="model">sales.kpi</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="commercial_id"/>
+                <field name="month"/>
+                <field name="year"/>
+                <field name="prospects_contacted"/>
+                <field name="appointments"/>
+                <field name="quotations"/>
+                <field name="sales"/>
+                <field name="revenue"/>
+                <field name="transformation_rate"/>
+                <field name="prospect_to_appointment_rate"/>
+                <field name="average_sale_value"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_sales_kpi_form" model="ir.ui.view">
+        <field name="name">sales.kpi.form</field>
+        <field name="model">sales.kpi</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group string="Period">
+                        <field name="commercial_id"/>
+                        <field name="month"/>
+                        <field name="year"/>
+                    </group>
+
+                    <group string="Sales Results">
+                        <field name="prospects_contacted"/>
+                        <field name="appointments"/>
+                        <field name="quotations"/>
+                        <field name="sales"/>
+                        <field name="revenue"/>
+                    </group>
+
+                    <group string="Calculated KPIs">
+                        <field name="transformation_rate"/>
+                        <field name="prospect_to_appointment_rate"/>
+                        <field name="average_sale_value"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_sales_kpi_search" model="ir.ui.view">
+        <field name="name">sales.kpi.search</field>
+        <field name="model">sales.kpi</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="commercial_id"/>
+                <field name="month"/>
+                <field name="year"/>
+
+                <group expand="0" string="Group By">
+                    <filter
+                        name="group_by_commercial"
+                        string="Commercial"
+                        context="{'group_by': 'commercial_id'}"/>
+
+                    <filter
+                        name="group_by_year"
+                        string="Year"
+                        context="{'group_by': 'year'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>
