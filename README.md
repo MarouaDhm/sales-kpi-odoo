@@ -138,3 +138,27 @@ Invoke-RestMethod -Uri "http://localhost:8069/api/sales-kpi" `
     -ContentType "application/json" `
     -Body $body
 ```
+
+## Captures d'écran
+
+### Liste des commerciaux
+
+![Commercials](screenshots/commercials.png)
+
+### Liste des KPI mensuels
+
+![Monthly KPIs](screenshots/monthly_kpis.png)
+
+### Formulaire KPI
+
+![KPI Form](screenshots/kpi_form1.png)
+![KPI Form](screenshots/kpi_form2.png)
+
+
+### GET API
+
+![GET API](screenshots/get_api.png)
+
+### POST API
+
+![POST API](screenshots/post_api.png)
